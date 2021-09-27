@@ -243,41 +243,48 @@ header .navbar-nav .nav-link:hover {
 .seventh_section .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "main_art art1"
-  "main_art art2"
-  "main_art art3" ;
+  grid-template-areas:
+    "main_art art1"
+    "main_art art2"
+    "main_art art3";
   gap: 10px;
 }
 
-.seventh_section .wrapper{
-  
+.eighth_section .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "art1 main_art"
+    "art2 main_art"
+    "art3 main_art ";
+    gap: 10px;
 }
 
-.seventh_section .wrapper article:not(.main_article) a {
+.last_section .wrapper article:not(.main_article) a {
   display: grid;
   grid-template-columns: 1fr 2fr;
-} 
+}
 
-.seventh_section .wrapper .main_article a , 
-.seventh_section .wrapper .main_article a figure,
-.seventh_section .wrapper .main_article a figure img {
+.last_section .wrapper .main_article a,
+.last_section .wrapper .main_article a figure,
+.last_section .wrapper .main_article a figure img {
   height: 100%;
 }
-.seventh_section .wrapper  a figure img{
+.last_section .wrapper a figure img {
   object-fit: cover;
   height: 100%;
 }
 
-.seventh_section .wrapper .main_article {
+.last_section .wrapper .main_article {
   grid-area: main_art;
 }
-.seventh_section .wrapper .art1 {
+.last_section .wrapper .art1 {
   grid-area: art1;
 }
-.seventh_section .wrapper .art2 {
+.last_section .wrapper .art2 {
   grid-area: art2;
 }
-.seventh_section .wrapper .art3 {
+.last_section .wrapper .art3 {
   grid-area: art3;
 }
 /* end seventh_section */
@@ -448,7 +455,6 @@ footer h4 {
       "art3 art4";
   }
 
-
   .fourth_section .wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -456,14 +462,14 @@ footer h4 {
   .sixth_section .wrapper {
     grid-template-columns: 1fr;
   }
-  .seventh_section .wrapper{
+  .last_section .wrapper {
     grid-template-columns: 1fr;
-    grid-template-areas: "main_art" 
-    "art1" 
-    "art2" 
-    "art3";
+    grid-template-areas:
+      "main_art"
+      "art1"
+      "art2"
+      "art3";
   }
-
 }
 
 @media screen and (max-width: 767px) {
