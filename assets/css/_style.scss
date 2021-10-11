@@ -48,6 +48,10 @@ img {
     padding: 40px 0;
 }
 
+.bg_white{
+    background-color: white;
+}
+
 
 // ************************************************
 
@@ -302,6 +306,7 @@ main {
 
         a {
             color: black;
+
             @media screen and(max-width:767px) {
                 font-size: 13px;
             }
@@ -345,6 +350,19 @@ main {
 
                 }
 
+                .art_desc {
+                    color: black;
+                    font-size: 14px;
+                    height: 20px;
+                    line-height: 20px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 80%;
+                    margin: 0;
+                    font-weight: 400;
+                }
+
             }
 
         }
@@ -352,14 +370,14 @@ main {
 
     // ************************************************
 
-    .ad_banner {
+    .banniere_pub {
         padding: 20px 0 0;
     }
 
     // ************************************************
 
 
-    .first_sec .wrapper {
+    .random_sec .wrapper {
 
         .slider_wrapper {
             margin-bottom: 0;
@@ -465,70 +483,65 @@ main {
 
     // ************************************************
 
-    .content {
-        background-color: white;
 
-       
-        .second_sec {
 
-            article {
+    .football_sec {
 
-                a {
+        article {
 
-                    figure {
+            a {
 
-                        img {
+                figure {
 
-                            object-fit: cover;
-                            height: 110px;
+                    img {
+
+                        object-fit: cover;
+                        height: 110px;
+                    }
+                }
+
+                .art_details {
+                    padding: 0;
+
+                    span {
+                        display: inline-block;
+                        margin: 0 3px 0;
+                        font-size: 11px;
+
+                        &.art_date {
+                            color: #ccc;
                         }
                     }
 
-                    .art_details {
-                        padding: 0;
-
-                        span {
-                            display: inline-block;
-                            margin: 0 3px 0;
-                            font-size: 13px;
-
-                            &.art_date {
-                                color: #ccc;
-                            }
-                        }
-
-                        .art_categorie {
-                            color: orangered;
-                            font-weight: 700;
-                        }
-
-                        .art_title {
-                            font-weight: 700;
-                            font-size: 18px;
-                            margin: 7px 0;
-                        }
-
-                        .art_desc {
-                            color: black;
-                            font-size: 14px;
-                            height: 20px;
-                            line-height: 20px;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            max-width: 80%;
-                            margin: 0;
-
-                        }
+                    .art_categorie {
+                        color: orangered;
+                        font-weight: 700;
                     }
+
+                    .art_title {
+                        font-weight: 600;
+                        font-size: 18px;
+                        margin: 7px 0;
+                    }
+
 
                 }
+
             }
         }
 
+        .banniere_pub2 {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+
+    .tennis_sec {
         
     }
+
 }
+
 
 // footer 
 
