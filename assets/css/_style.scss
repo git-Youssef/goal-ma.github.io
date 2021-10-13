@@ -48,7 +48,7 @@ img {
     padding: 40px 0;
 }
 
-.bg_white{
+.bg_white {
     background-color: white;
 }
 
@@ -333,34 +333,36 @@ main {
             }
 
             .art_details {
-                padding: 10px 8px;
-                background-color: white;
 
-                .art_src {
-                    margin: 10px 0px;
-                    display: block;
-                    font-size: 14px;
+                span {
+                    display: inline-block;
+                    font-size: 11px;
                     color: #ccc;
+                    margin: 0 2px;
                 }
+
 
                 .art_title {
                     font-size: 16px;
                     color: black;
                     line-height: 22px;
+                    margin: 7px 0;
+                    font-weight: 600;
 
                 }
 
                 .art_desc {
                     color: black;
                     font-size: 14px;
-                    height: 20px;
-                    line-height: 20px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    max-width: 80%;
                     margin: 0;
                     font-weight: 400;
+                    overflow: hidden;
+                    width: 100%;
+                }
+
+                .art_categorie {
+                    color: orangered;
+                    font-weight: 700;
                 }
 
             }
@@ -370,12 +372,51 @@ main {
 
     // ************************************************
 
-    .banniere_pub {
+    .banniere_pub_outside {
         padding: 20px 0 0;
     }
 
     // ************************************************
 
+    .slider_wrapper {
+        .slick-arrow {
+            height: 40px;
+            width: 28px;
+            color: white;
+            border: 0;
+            background-color: #00000052;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            z-index: 99;
+
+            &.next-arrow {
+                right: 0;
+
+            }
+
+        }
+
+        .slick-dots {
+            bottom: 20px;
+
+            li {
+                button:before {
+                    color: rgb(255 255 255 / 35%);
+                    font-size: 23px;
+                    opacity: initial;
+                }
+
+                &.slick-active button::before {
+                    color: white;
+                }
+            }
+        }
+    }
 
     .random_sec .wrapper {
 
@@ -388,47 +429,31 @@ main {
                 height: 100%;
             }
 
-            .slick-arrow {
-                height: 40px;
-                width: 28px;
-                color: white;
-                border: 0;
-                background-color: #00000052;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
-                z-index: 99;
 
-                &.next-arrow {
-                    right: 0;
 
-                }
+            // .slick-dots {
+            //     bottom: 20px;
 
-            }
+            //     li {
+            //         button:before {
+            //             color: rgb(255 255 255 / 35%);
+            //             font-size: 23px;
+            //             opacity: initial;
+            //         }
 
-            .slick-dots {
-                bottom: 20px;
-
-                li {
-                    button:before {
-                        color: rgb(255 255 255 / 35%);
-                        font-size: 23px;
-                        opacity: initial;
-                    }
-
-                    &.slick-active button::before {
-                        color: white;
-                    }
-                }
-            }
+            //         &.slick-active button::before {
+            //             color: white;
+            //         }
+            //     }
+            // }
         }
 
         article {
 
+            .art_details {
+                padding: 8px 10px;
+                background-color: white;
+            }
 
             &:not(.main_article) {
                 a {
@@ -467,6 +492,7 @@ main {
                         width: 100%;
                         background: 0;
 
+
                         .art_title {
                             color: white;
                         }
@@ -484,60 +510,169 @@ main {
     // ************************************************
 
 
+    .football_sec,
+    .rugby_sec,
+    .cyclisme,
+    .basket {
 
-    .football_sec {
+        figure img {
+            object-fit: cover;
+            height: 110px;
 
-        article {
-
-            a {
-
-                figure {
-
-                    img {
-
-                        object-fit: cover;
-                        height: 110px;
-                    }
-                }
-
-                .art_details {
-                    padding: 0;
-
-                    span {
-                        display: inline-block;
-                        margin: 0 3px 0;
-                        font-size: 11px;
-
-                        &.art_date {
-                            color: #ccc;
-                        }
-                    }
-
-                    .art_categorie {
-                        color: orangered;
-                        font-weight: 700;
-                    }
-
-                    .art_title {
-                        font-weight: 600;
-                        font-size: 18px;
-                        margin: 7px 0;
-                    }
-
-
-                }
-
-            }
         }
 
-        .banniere_pub2 {
+        .art_desc {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+        }
+
+        .banniere_pub_inside {
             max-width: 300px;
             margin: 0 auto;
         }
     }
 
     .tennis_sec {
-        
+
+        .art_desc {
+            line-height: 1.5em;
+            height: 3em;
+            overflow: hidden;
+        }
+    }
+
+    .p_v_d {
+
+        .slider_wrapper {
+            .slick-arrow {
+                margin-top: 20px;
+                width: 40px;
+
+                &.next-arrow {
+                    right: -40px;
+                }
+
+                &.prev-arrow {
+                    left: -40px;
+                }
+            }
+
+            .slick-dots {
+                bottom: -40px;
+
+                li {
+                    button:before {
+                        color: #0000003b;
+
+                    }
+
+                    &.slick-active button::before {
+                        color: rgb(0, 0, 0);
+                    }
+                }
+            }
+
+        }
+
+        .wrapper_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "main_art art1"
+                "main_art art2"
+                "main_art art3";
+            gap: 10px;
+
+            @media screen and (max-width:767.999px) {
+
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "main_art"
+                    "art1"
+                    "art2"
+                    "art3";
+            }
+
+            .main_article {
+                grid-area: main_art;
+            }
+
+            .art1 {
+                grid-area: art1;
+            }
+
+            .art2 {
+                grid-area: art2;
+
+            }
+
+            .art3 {
+                grid-area: art3;
+            }
+
+            article:not(.main_article) {
+                a {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    gap: 10px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+
+            article.main_article {
+                a {
+                    height: 100%;
+
+                    .art_details {
+                        padding: 10px;
+                        position: absolute;
+                        bottom: 0;
+
+                        .art_title {
+                            color: white;
+                        }
+                    }
+
+                    figure {
+                        height: 100%;
+
+                        img {
+                            position: absolute;
+                            z-index: -1;
+
+                            @media screen and (max-width:767.999px) {
+                                position: initial;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .people {
+            h2 {
+                color: #F4255D;
+            }
+        }
+
+        .videos {
+            h2 {
+                color: #B00000;
+            }
+        }
+
+        .divers {
+            h2 {
+                color: #4DB2E9;
+
+            }
+        }
     }
 
 }
