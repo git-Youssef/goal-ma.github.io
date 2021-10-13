@@ -270,45 +270,35 @@ main article a .overlay {
   width: 100%;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.98), rgba(241, 241, 241, 0));
 }
-main article a .art_details {
-  padding: 10px 8px;
-  background-color: white;
-}
-main article a .art_details .art_src {
-  margin: 10px 0px;
-  display: block;
-  font-size: 14px;
+main article a .art_details span {
+  display: inline-block;
+  font-size: 11px;
   color: #ccc;
+  margin: 0 2px;
 }
 main article a .art_details .art_title {
   font-size: 16px;
   color: black;
   line-height: 22px;
+  margin: 7px 0;
+  font-weight: 600;
 }
 main article a .art_details .art_desc {
   color: black;
   font-size: 14px;
-  height: 20px;
-  line-height: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 80%;
   margin: 0;
   font-weight: 400;
+  overflow: hidden;
+  width: 100%;
 }
-main .banniere_pub {
+main article a .art_details .art_categorie {
+  color: orangered;
+  font-weight: 700;
+}
+main .banniere_pub_outside {
   padding: 20px 0 0;
 }
-main .random_sec .wrapper .slider_wrapper {
-  margin-bottom: 0;
-  height: 100%;
-}
-main .random_sec .wrapper .slider_wrapper .slick-list,
-main .random_sec .wrapper .slider_wrapper .slick-track {
-  height: 100%;
-}
-main .random_sec .wrapper .slider_wrapper .slick-arrow {
+main .slider_wrapper .slick-arrow {
   height: 40px;
   width: 28px;
   color: white;
@@ -323,19 +313,31 @@ main .random_sec .wrapper .slider_wrapper .slick-arrow {
   -o-transform: translateY(-50%);
   z-index: 99;
 }
-main .random_sec .wrapper .slider_wrapper .slick-arrow.next-arrow {
+main .slider_wrapper .slick-arrow.next-arrow {
   right: 0;
 }
-main .random_sec .wrapper .slider_wrapper .slick-dots {
+main .slider_wrapper .slick-dots {
   bottom: 20px;
 }
-main .random_sec .wrapper .slider_wrapper .slick-dots li button:before {
+main .slider_wrapper .slick-dots li button:before {
   color: rgba(255, 255, 255, 0.35);
   font-size: 23px;
   opacity: initial;
 }
-main .random_sec .wrapper .slider_wrapper .slick-dots li.slick-active button::before {
+main .slider_wrapper .slick-dots li.slick-active button::before {
   color: white;
+}
+main .random_sec .wrapper .slider_wrapper {
+  margin-bottom: 0;
+  height: 100%;
+}
+main .random_sec .wrapper .slider_wrapper .slick-list,
+main .random_sec .wrapper .slider_wrapper .slick-track {
+  height: 100%;
+}
+main .random_sec .wrapper article .art_details {
+  padding: 8px 10px;
+  background-color: white;
 }
 main .random_sec .wrapper article:not(.main_article) a {
   display: flex;
@@ -370,34 +372,116 @@ main .random_sec .wrapper article.main_article a .art_details {
 main .random_sec .wrapper article.main_article a .art_details .art_title {
   color: white;
 }
-main .football_sec article a figure img {
+main .football_sec figure img,
+main .rugby_sec figure img,
+main .cyclisme figure img,
+main .basket figure img {
   object-fit: cover;
   height: 110px;
 }
-main .football_sec article a .art_details {
-  padding: 0;
+main .football_sec .art_desc,
+main .rugby_sec .art_desc,
+main .cyclisme .art_desc,
+main .basket .art_desc {
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-main .football_sec article a .art_details span {
-  display: inline-block;
-  margin: 0 3px 0;
-  font-size: 11px;
-}
-main .football_sec article a .art_details span.art_date {
-  color: #ccc;
-}
-main .football_sec article a .art_details .art_categorie {
-  color: orangered;
-  font-weight: 700;
-}
-main .football_sec article a .art_details .art_title {
-  font-weight: 600;
-  font-size: 18px;
-  margin: 7px 0;
-}
-main .football_sec .banniere_pub2 {
+main .football_sec .banniere_pub_inside,
+main .rugby_sec .banniere_pub_inside,
+main .cyclisme .banniere_pub_inside,
+main .basket .banniere_pub_inside {
   max-width: 300px;
   margin: 0 auto;
 }
+main .tennis_sec .art_desc {
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+}
+main .p_v_d .slider_wrapper .slick-arrow {
+  margin-top: 20px;
+  width: 40px;
+}
+main .p_v_d .slider_wrapper .slick-arrow.next-arrow {
+  right: -40px;
+}
+main .p_v_d .slider_wrapper .slick-arrow.prev-arrow {
+  left: -40px;
+}
+main .p_v_d .slider_wrapper .slick-dots {
+  bottom: -40px;
+}
+main .p_v_d .slider_wrapper .slick-dots li button:before {
+  color: #0000003b;
+}
+main .p_v_d .slider_wrapper .slick-dots li.slick-active button::before {
+  color: black;
+}
+main .p_v_d .wrapper_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "main_art art1" "main_art art2" "main_art art3";
+  gap: 10px;
+}
+@media screen and (max-width: 767.999px) {
+  main .p_v_d .wrapper_grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "main_art" "art1" "art2" "art3";
+  }
+}
+main .p_v_d .wrapper_grid .main_article {
+  grid-area: main_art;
+}
+main .p_v_d .wrapper_grid .art1 {
+  grid-area: art1;
+}
+main .p_v_d .wrapper_grid .art2 {
+  grid-area: art2;
+}
+main .p_v_d .wrapper_grid .art3 {
+  grid-area: art3;
+}
+main .p_v_d .wrapper_grid article:not(.main_article) a {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+main .p_v_d .wrapper_grid article:not(.main_article) a img {
+  height: 100%;
+}
+main .p_v_d .wrapper_grid article.main_article a {
+  height: 100%;
+}
+main .p_v_d .wrapper_grid article.main_article a .art_details {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+}
+main .p_v_d .wrapper_grid article.main_article a .art_details .art_title {
+  color: white;
+}
+main .p_v_d .wrapper_grid article.main_article a figure {
+  height: 100%;
+}
+main .p_v_d .wrapper_grid article.main_article a figure img {
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (max-width: 767.999px) {
+  main .p_v_d .wrapper_grid article.main_article a figure img {
+    position: initial;
+  }
+}
+main .p_v_d .people h2 {
+  color: #F4255D;
+}
+main .p_v_d .videos h2 {
+  color: #B00000;
+}
+main .p_v_d .divers h2 {
+  color: #4DB2E9;
+}
+
 footer .logo_wrapper {
   display: flex;
   align-items: center;
