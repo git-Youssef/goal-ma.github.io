@@ -1,12 +1,15 @@
 $(document).ready(function () {
 
-    $('.slider_wrapper').slick({
-        dots: true,
-        prevArrow: '<button class="prev-arrow"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow: '<button class="next-arrow"><i class="fas fa-chevron-right"></i></button>',
-        autoplay : true,
-    });
+    $(".slider_wrapper" ).each(function( index,value ) {
 
+        $(this).slick({
+            dots: true,
+            prevArrow: '<button class="prev-arrow"><i class="fas fa-chevron-left"></i></button>',
+            nextArrow: '<button class="next-arrow"><i class="fas fa-chevron-right"></i></button>',
+            autoplay : true,
+      });
+    })
+    
 })
 
 
