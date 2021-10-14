@@ -49,6 +49,10 @@ img {
   background-color: white;
 }
 
+.btn:focus, input:focus {
+  box-shadow: none;
+}
+
 header {
   background-color: white;
   transition: 0.3s all;
@@ -243,8 +247,14 @@ main .section_title {
 }
 main .section_title h2 {
   font-weight: 600;
+  line-height: 40px;
+  font-weight: 600;
 }
-main .section_title div {
+main .section_title h5 {
+  font-size: 20px;
+  line-height: 40px;
+}
+main .section_title .separator {
   flex-grow: 1;
   border-bottom: 2px solid rgba(206, 206, 206, 0.35);
   margin: 0 15px;
@@ -265,6 +275,8 @@ main article a {
   position: relative;
 }
 main article a .overlay {
+  top: 0;
+  left: 0;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -282,6 +294,8 @@ main article a .art_details .art_title {
   line-height: 22px;
   margin: 7px 0;
   font-weight: 600;
+  height: 44px;
+  overflow: hidden;
 }
 main article a .art_details .art_desc {
   color: black;
@@ -294,6 +308,14 @@ main article a .art_details .art_desc {
 main article a .art_details .art_categorie {
   color: orangered;
   font-weight: 700;
+}
+main article.main_article .art_details {
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+}
+main article.main_article .art_details .art_title {
+  color: white;
 }
 main .banniere_pub_outside {
   padding: 20px 0 0;
@@ -335,13 +357,13 @@ main .random_sec .wrapper .slider_wrapper .slick-list,
 main .random_sec .wrapper .slider_wrapper .slick-track {
   height: 100%;
 }
-main .random_sec .wrapper article .art_details {
-  padding: 8px 10px;
-  background-color: white;
-}
 main .random_sec .wrapper article:not(.main_article) a {
   display: flex;
   flex-direction: column;
+}
+main .random_sec .wrapper article:not(.main_article) a .art_details {
+  background-color: white;
+  padding: 10px;
 }
 main .random_sec .wrapper article.main_article {
   height: 100%;
@@ -354,8 +376,10 @@ main .random_sec .wrapper article.main_article a figure {
 }
 main .random_sec .wrapper article.main_article a figure img {
   width: 100%;
+  height: 100%;
   z-index: -1;
   object-fit: cover;
+  object-position: top;
   position: initial;
 }
 @media screen and (min-width: 768px) {
@@ -363,33 +387,60 @@ main .random_sec .wrapper article.main_article a figure img {
     position: absolute;
   }
 }
-main .random_sec .wrapper article.main_article a .art_details {
+main .football_sec article,
+main .rugby_sec article,
+main .basket article,
+main .cyclisme article,
+main .p_v_d article {
+  height: 100%;
+}
+main .football_sec article a,
+main .rugby_sec article a,
+main .basket article a,
+main .cyclisme article a,
+main .p_v_d article a {
+  height: 100%;
+}
+main .football_sec article a figure,
+main .rugby_sec article a figure,
+main .basket article a figure,
+main .cyclisme article a figure,
+main .p_v_d article a figure {
+  position: relative;
+  height: 100%;
+}
+main .football_sec article a figure img,
+main .rugby_sec article a figure img,
+main .basket article a figure img,
+main .cyclisme article a figure img,
+main .p_v_d article a figure img {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: 0;
-}
-main .random_sec .wrapper article.main_article a .art_details .art_title {
-  color: white;
-}
-main .football_sec figure img,
-main .rugby_sec figure img,
-main .cyclisme figure img,
-main .basket figure img {
+  height: 100%;
   object-fit: cover;
-  height: 110px;
+  object-position: top;
 }
-main .football_sec .art_desc,
-main .rugby_sec .art_desc,
-main .cyclisme .art_desc,
-main .basket .art_desc {
+@media screen and (max-width: 767.999px) {
+  main .football_sec article a figure img,
+main .rugby_sec article a figure img,
+main .basket article a figure img,
+main .cyclisme article a figure img,
+main .p_v_d article a figure img {
+    position: initial;
+  }
+}
+main .football_sec article a .art_desc,
+main .rugby_sec article a .art_desc,
+main .basket article a .art_desc,
+main .cyclisme article a .art_desc,
+main .p_v_d article a .art_desc {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .football_sec .banniere_pub_inside,
 main .rugby_sec .banniere_pub_inside,
+main .basket .banniere_pub_inside,
 main .cyclisme .banniere_pub_inside,
-main .basket .banniere_pub_inside {
+main .p_v_d .banniere_pub_inside {
   max-width: 300px;
   margin: 0 auto;
 }
@@ -397,6 +448,64 @@ main .tennis_sec .art_desc {
   line-height: 1.5em;
   height: 3em;
   overflow: hidden;
+}
+main .tennis_sec .newsletter_form h5 {
+  font-size: 16px;
+}
+main .tennis_sec .newsletter_form .btn-primary {
+  background-color: #06A49C;
+  border-color: #06A49C;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+main .tennis_sec .social_media li {
+  display: inline-block;
+  margin: 0 5px;
+}
+main .tennis_sec .social_media li a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  border: 1px solid #06A49C;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s;
+  background-color: #06A49C;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  color: white;
+  text-align: center;
+}
+main .tennis_sec .social_media li a:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+main .cyclisme article .art_details .art_categorie {
+  background-color: yellow;
+  color: black;
+  padding: 3px 5px;
+  display: inline-block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  margin: 0 0 8px;
+}
+main .cyclisme article .art_details .art_title {
+  font-size: 13px;
 }
 main .p_v_d .slider_wrapper .slick-arrow {
   margin-top: 20px;
@@ -416,61 +525,6 @@ main .p_v_d .slider_wrapper .slick-dots li button:before {
 }
 main .p_v_d .slider_wrapper .slick-dots li.slick-active button::before {
   color: black;
-}
-main .p_v_d .wrapper_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "main_art art1" "main_art art2" "main_art art3";
-  gap: 10px;
-}
-@media screen and (max-width: 767.999px) {
-  main .p_v_d .wrapper_grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "main_art" "art1" "art2" "art3";
-  }
-}
-main .p_v_d .wrapper_grid .main_article {
-  grid-area: main_art;
-}
-main .p_v_d .wrapper_grid .art1 {
-  grid-area: art1;
-}
-main .p_v_d .wrapper_grid .art2 {
-  grid-area: art2;
-}
-main .p_v_d .wrapper_grid .art3 {
-  grid-area: art3;
-}
-main .p_v_d .wrapper_grid article:not(.main_article) a {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
-}
-main .p_v_d .wrapper_grid article:not(.main_article) a img {
-  height: 100%;
-}
-main .p_v_d .wrapper_grid article.main_article a {
-  height: 100%;
-}
-main .p_v_d .wrapper_grid article.main_article a .art_details {
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-}
-main .p_v_d .wrapper_grid article.main_article a .art_details .art_title {
-  color: white;
-}
-main .p_v_d .wrapper_grid article.main_article a figure {
-  height: 100%;
-}
-main .p_v_d .wrapper_grid article.main_article a figure img {
-  position: absolute;
-  z-index: -1;
-}
-@media screen and (max-width: 767.999px) {
-  main .p_v_d .wrapper_grid article.main_article a figure img {
-    position: initial;
-  }
 }
 main .p_v_d .people h2 {
   color: #F4255D;
@@ -535,6 +589,7 @@ footer .social_media li a {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   color: white;
+  text-align: center;
 }
 footer .social_media li a:hover {
   transform: translateY(-5px);
