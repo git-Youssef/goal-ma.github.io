@@ -52,6 +52,10 @@ img {
     background-color: white;
 }
 
+.btn:focus , input:focus{
+    box-shadow: none;
+}
+
 
 // ************************************************
 
@@ -296,9 +300,16 @@ main {
 
         h2 {
             font-weight: 600;
+            line-height: 40px;
+            font-weight: 600;
         }
 
-        div {
+        h5{
+            font-size: 20px;
+            line-height: 40px;
+        }
+
+        .separator {
             flex-grow: 1;
             border-bottom: 2px solid rgb(206 206 206 / 35%);
             margin: 0 15px;
@@ -324,8 +335,9 @@ main {
             display: block;
             position: relative;
 
-
             .overlay {
+                top: 0;
+                left: 0;
                 position: absolute;
                 height: 100%;
                 width: 100%;
@@ -333,6 +345,7 @@ main {
             }
 
             .art_details {
+
 
                 span {
                     display: inline-block;
@@ -348,6 +361,8 @@ main {
                     line-height: 22px;
                     margin: 7px 0;
                     font-weight: 600;
+                    height: 44px;
+                    overflow: hidden;
 
                 }
 
@@ -367,6 +382,19 @@ main {
 
             }
 
+        }
+
+        &.main_article {
+            .art_details {
+                position: absolute;
+                padding: 10px;
+                bottom: 0;
+
+
+                .art_title {
+                    color: white;
+                }
+            }
         }
     }
 
@@ -431,38 +459,21 @@ main {
 
 
 
-            // .slick-dots {
-            //     bottom: 20px;
-
-            //     li {
-            //         button:before {
-            //             color: rgb(255 255 255 / 35%);
-            //             font-size: 23px;
-            //             opacity: initial;
-            //         }
-
-            //         &.slick-active button::before {
-            //             color: white;
-            //         }
-            //     }
-            // }
         }
 
         article {
-
-            .art_details {
-                padding: 8px 10px;
-                background-color: white;
-            }
 
             &:not(.main_article) {
                 a {
                     display: flex;
                     flex-direction: column;
+
+                    .art_details {
+                        background-color: white;
+                        padding: 10px;
+                    }
                 }
             }
-
-
 
             &.main_article {
                 height: 100%;
@@ -475,26 +486,16 @@ main {
 
                         img {
                             width: 100%;
+                            height: 100%;
                             z-index: -1;
                             object-fit: cover;
+                            object-position: top;
                             position: initial;
 
 
                             @media screen and (min-width:768px) {
                                 position: absolute;
                             }
-                        }
-                    }
-
-                    .art_details {
-                        position: absolute;
-                        bottom: 0;
-                        width: 100%;
-                        background: 0;
-
-
-                        .art_title {
-                            color: white;
                         }
                     }
                 }
@@ -512,26 +513,48 @@ main {
 
     .football_sec,
     .rugby_sec,
+    .basket,
     .cyclisme,
-    .basket {
+    .p_v_d {
 
-        figure img {
-            object-fit: cover;
-            height: 110px;
+        article {
+            height: 100%;
 
+            a {
+                height: 100%;
+
+                figure {
+                    position: relative;
+                    height: 100%;
+
+                    img {
+                        position: absolute;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: top;
+
+                        @media screen and (max-width:767.999px) {
+                            position: initial;
+                        }
+                    }
+                }
+
+                .art_desc {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+
+                }
+
+            }
         }
 
-        .art_desc {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-
-        }
 
         .banniere_pub_inside {
             max-width: 300px;
             margin: 0 auto;
         }
     }
+
 
     .tennis_sec {
 
@@ -540,6 +563,86 @@ main {
             height: 3em;
             overflow: hidden;
         }
+
+        .newsletter_form {
+            h5 {
+                font-size: 16px;
+            }
+            .btn-primary{
+                background-color: $main_color;
+                border-color: $main_color;
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+}
+        }
+
+        
+        .social_media {
+            li {
+                display: inline-block;
+                margin: 0 5px;
+    
+                a {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    display: block;
+                    border: 1px solid $main_color;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    transition: all .3s;
+                    background-color: $main_color;
+                    -webkit-transition: all .3s;
+                    -moz-transition: all .3s;
+                    -ms-transition: all .3s;
+                    -o-transition: all .3s;
+                    color: white;
+                    text-align: center;
+    
+                    &:hover {
+                        transform: translateY(-5px);
+                        -webkit-transform: translateY(-5px);
+                        -moz-transform: translateY(-5px);
+                        -ms-transform: translateY(-5px);
+                        -o-transform: translateY(-5px);
+                    }
+                }
+            }
+        }
+    }
+
+    .cyclisme {
+
+        article {
+            .art_details {
+                .art_categorie {
+                    background-color: yellow;
+                    color: black;
+                    padding: 3px 5px;
+                    display: inline-block;
+                    border-radius: 2px;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    -ms-border-radius: 2px;
+                    -o-border-radius: 2px;
+                    margin: 0 0 8px;
+                }
+
+                .art_title {
+                    font-size: 13px;
+
+                }
+            }
+
+        }
+
+        
     }
 
     .p_v_d {
@@ -571,86 +674,6 @@ main {
                         color: rgb(0, 0, 0);
                     }
                 }
-            }
-
-        }
-
-        .wrapper_grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas:
-                "main_art art1"
-                "main_art art2"
-                "main_art art3";
-            gap: 10px;
-
-            @media screen and (max-width:767.999px) {
-
-                grid-template-columns: 1fr;
-                grid-template-areas:
-                    "main_art"
-                    "art1"
-                    "art2"
-                    "art3";
-            }
-
-            .main_article {
-                grid-area: main_art;
-            }
-
-            .art1 {
-                grid-area: art1;
-            }
-
-            .art2 {
-                grid-area: art2;
-
-            }
-
-            .art3 {
-                grid-area: art3;
-            }
-
-            article:not(.main_article) {
-                a {
-                    display: grid;
-                    grid-template-columns: 1fr 2fr;
-                    gap: 10px;
-
-                    img {
-                        height: 100%;
-                    }
-                }
-            }
-
-            article.main_article {
-                a {
-                    height: 100%;
-
-                    .art_details {
-                        padding: 10px;
-                        position: absolute;
-                        bottom: 0;
-
-                        .art_title {
-                            color: white;
-                        }
-                    }
-
-                    figure {
-                        height: 100%;
-
-                        img {
-                            position: absolute;
-                            z-index: -1;
-
-                            @media screen and (max-width:767.999px) {
-                                position: initial;
-                            }
-                        }
-                    }
-                }
-
             }
 
         }
@@ -742,6 +765,7 @@ footer {
                 -ms-transition: all .3s;
                 -o-transition: all .3s;
                 color: white;
+                text-align: center;
 
                 &:hover {
                     transform: translateY(-5px);
