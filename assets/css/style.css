@@ -16,8 +16,10 @@ body {
   color: #2a303b;
 }
 
-.container-xl {
-  max-width: 1000px;
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
 }
 
 figure {
@@ -44,13 +46,25 @@ img {
 .section_padding {
   padding: 40px 0;
 }
+@media screen and (max-width: 767px) {
+  .section_padding {
+    padding: 20px 0;
+  }
+}
 
 .bg_white {
   background-color: white;
 }
 
-.btn:focus, input:focus {
+.btn:focus,
+input:focus {
   box-shadow: none;
+}
+
+@media screen and (max-width: 767px) {
+  .h-100 {
+    height: auto !important;
+  }
 }
 
 header {
@@ -183,7 +197,7 @@ header .top .wrapper .right .sabonner {
   background-color: #06A49C;
   color: white;
 }
-header .bottom .navigation {
+header .navigation {
   padding: 0;
   max-width: 1150px;
   width: 100%;
@@ -196,15 +210,15 @@ header .bottom .navigation {
   -o-transition: all 0.5s;
 }
 @media screen and (max-width: 991.2px) {
-  header .bottom .navigation {
-    position: fixed;
+  header .navigation {
+    position: absolute;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
   }
-  header .bottom .navigation.translate {
+  header .navigation.translate {
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
     -moz-transform: translateX(0%);
@@ -212,25 +226,25 @@ header .bottom .navigation {
     -o-transform: translateX(0%);
   }
 }
-header .bottom .navigation .links_header {
+header .navigation .links_header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 @media screen and (min-width: 992px) {
-  header .bottom .navigation .links_header {
+  header .navigation .links_header {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
   }
 }
 @media screen and (max-width: 991.2px) {
-  header .bottom .navigation .nav-item {
+  header .navigation .nav-item {
     border-bottom: 1px solid rgba(216, 214, 214, 0.644);
     background-color: #F5F6F8;
   }
 }
-header .bottom .navigation .nav-item .nav-link {
+header .navigation .nav-item .nav-link {
   color: #2a303b;
   text-transform: uppercase;
   padding: 15px;
@@ -247,6 +261,12 @@ main .section_title {
 }
 main .section_title h2 {
   line-height: 40px;
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  main .section_title h2 {
+    font-size: 20px;
+  }
 }
 main .section_title h5 {
   line-height: 40px;
@@ -257,12 +277,18 @@ main .section_title .separator {
   border-bottom: 2px solid rgba(206, 206, 206, 0.35);
   margin: 0 15px;
 }
+@media screen and (max-width: 767px) {
+  main .section_title .separator {
+    margin: 0 10px;
+  }
+}
 main .section_title a {
   color: black;
+  font-size: 14px;
 }
 @media screen and (max-width: 767px) {
   main .section_title a {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 main .section_title a i {
@@ -285,6 +311,11 @@ main article a .art_details span {
   font-size: 11px;
   color: #ccc;
   margin: 0 2px;
+}
+@media screen and (max-width: 767px) {
+  main article a .art_details span {
+    margin: 0 4px;
+  }
 }
 main article a .art_details .art_title {
   font-size: 16px;
@@ -316,7 +347,7 @@ main article.main_article .art_details .art_title {
   color: white;
 }
 main .banniere_pub_outside {
-  padding: 20px 0 0;
+  padding: 20px 0;
 }
 main .slider_wrapper .slick-arrow {
   height: 40px;
@@ -490,6 +521,9 @@ main .tennis_sec .social_media li a:hover {
   -ms-transform: translateY(-5px);
   -o-transform: translateY(-5px);
 }
+main .tennis_sec .right_side .section_title {
+  margin-bottom: 20px;
+}
 main .cyclisme article .art_details .art_categorie {
   background-color: yellow;
   color: black;
@@ -553,6 +587,11 @@ footer .links_footer {
 }
 footer .links_footer li {
   width: 25%;
+}
+@media screen and (max-width: 767px) {
+  footer .links_footer li {
+    width: 50%;
+  }
 }
 footer .links_footer li a {
   color: #2a303b;
