@@ -19,8 +19,10 @@ body {
     color: #2a303b;
 }
 
-.container-xl {
-    max-width: 1000px;
+.container {
+    @media screen and(min-width:1200px) {
+        max-width: 1000px;
+    }
 }
 
 figure {
@@ -46,14 +48,28 @@ img {
 
 .section_padding {
     padding: 40px 0;
+
+    @media screen and (max-width : 767px) {
+        padding: 20px 0;
+
+    }
 }
 
 .bg_white {
     background-color: white;
 }
 
-.btn:focus , input:focus{
+.btn:focus,
+input:focus {
     box-shadow: none;
+}
+
+.h-100 {
+    @media screen and (max-width:767px) {
+
+        height: auto !important;
+
+    }
 }
 
 
@@ -221,7 +237,7 @@ header {
         }
     }
 
-    .bottom {
+    
 
         .navigation {
             padding: 0;
@@ -238,7 +254,7 @@ header {
 
 
             @media screen and(max-width: 991.2px) {
-                position: fixed;
+                position: absolute;
                 transform: translateX(-100%);
                 -webkit-transform: translateX(-100%);
                 -moz-transform: translateX(-100%);
@@ -283,7 +299,7 @@ header {
             }
         }
 
-    }
+    
 
 }
 
@@ -292,7 +308,7 @@ header {
 main {
     background-color: #F5F6F8;
 
-    // ************************************************
+    // ******************** title of sections****************************
     .section_title {
         display: flex;
         align-items: center;
@@ -300,10 +316,17 @@ main {
 
         h2 {
             line-height: 40px;
+            font-weight: 600;
+
+            @media screen and (max-width : 767px) {
+
+                font-size: 20px;
+
+            }
         }
 
-        h5{
-            
+        h5 {
+
             line-height: 40px;
             font-size: 18px;
         }
@@ -312,13 +335,18 @@ main {
             flex-grow: 1;
             border-bottom: 2px solid rgb(206 206 206 / 35%);
             margin: 0 15px;
+
+            @media screen and(max-width:767px) {
+               margin: 0 10px;
+            }
         }
 
         a {
             color: black;
+            font-size: 14px;
 
             @media screen and(max-width:767px) {
-                font-size: 13px;
+                font-size: 11px;
             }
 
             i {
@@ -327,7 +355,7 @@ main {
         }
     }
 
-    // ************************************************
+    // ****************** default article style ******************************
 
     article {
         a {
@@ -351,6 +379,10 @@ main {
                     font-size: 11px;
                     color: #ccc;
                     margin: 0 2px;
+
+                    @media screen and (max-width: 767px) {
+                        margin: 0 4px;
+                    }
                 }
 
 
@@ -397,10 +429,10 @@ main {
         }
     }
 
-    // ************************************************
+    // ******************** outside banner ****************************
 
     .banniere_pub_outside {
-        padding: 20px 0 0;
+        padding: 20px 0;
     }
 
     // ************************************************
@@ -567,7 +599,8 @@ main {
             h5 {
                 font-size: 16px;
             }
-            .btn-primary{
+
+            .btn-primary {
                 background-color: $main_color;
                 border-color: $main_color;
                 border-radius: 0;
@@ -575,15 +608,15 @@ main {
                 -moz-border-radius: 0;
                 -ms-border-radius: 0;
                 -o-border-radius: 0;
-}
+            }
         }
 
-        
+
         .social_media {
             li {
                 display: inline-block;
                 margin: 0 5px;
-    
+
                 a {
                     width: 40px;
                     height: 40px;
@@ -603,7 +636,7 @@ main {
                     -o-transition: all .3s;
                     color: white;
                     text-align: center;
-    
+
                     &:hover {
                         transform: translateY(-5px);
                         -webkit-transform: translateY(-5px);
@@ -613,6 +646,9 @@ main {
                     }
                 }
             }
+        }
+        .right_side .section_title {
+            margin-bottom: 20px;
         }
     }
 
@@ -641,7 +677,7 @@ main {
 
         }
 
-        
+
     }
 
     .p_v_d {
@@ -725,6 +761,10 @@ footer {
 
         li {
             width: 25%;
+
+            @media screen and(max-width : 767px) {
+                width: 50%;
+            }
 
             a {
                 color: #2a303b;
