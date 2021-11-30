@@ -286,6 +286,9 @@ header .navigation .nav-item .nav-link {
 main {
   background-color: #F5F6F8;
 }
+main.categ_page .random_sec .wrapper .main_article figure {
+  height: 250px;
+}
 main .random_sec .wrapper .slider_wrapper {
   margin-bottom: 0;
   height: 100%;
