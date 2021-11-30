@@ -347,6 +347,22 @@ header {
 main {
     background-color: #F5F6F8;
 
+    &.categ_page {
+
+        .random_sec .wrapper {
+
+
+            .main_article {
+
+                figure {
+                    height: 250px;
+                }
+            }
+
+
+        }
+    }
+
     .random_sec .wrapper {
 
         .slider_wrapper {
@@ -405,6 +421,8 @@ main {
         }
 
     }
+
+    
 
 
     .football_sec,
@@ -739,8 +757,6 @@ main {
 }
 
 // *******************end main page*****************************
-
-
 
 
 // footer 
