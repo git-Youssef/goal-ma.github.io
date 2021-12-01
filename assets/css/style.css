@@ -289,6 +289,10 @@ main {
 main.categ_page .random_sec .wrapper .main_article figure {
   height: 250px;
 }
+main.categ_page .vd_heading {
+  font-weight: 600;
+  text-align: center;
+}
 main .random_sec .wrapper .slider_wrapper {
   margin-bottom: 0;
   height: 100%;
