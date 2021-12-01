@@ -56,9 +56,6 @@ img {
     }
 }
 
-.bg_white {
-    background-color: white;
-}
 
 .btn:focus,
 input:focus {
@@ -345,7 +342,6 @@ header {
 // ****************** main page********************************
 
 main {
-    background-color: #F5F6F8;
 
     &.categ_page {
 
@@ -361,9 +357,38 @@ main {
 
 
         }
-        .vd_heading{
+
+        .vd_heading {
             font-weight: 600;
             text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 9px;
+                width: 50px;
+                background-color: #06A49C;
+                bottom: -15px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                z-index: 99;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -12px;
+                height: 2px;
+                width: 100%;
+                background-color: rgba(206, 206, 206, 0.35);
+            
+                left: 0;
+                right: 0;
+                margin: 0 auto; 
+            }
         }
     }
 
@@ -424,7 +449,7 @@ main {
 
         }
 
-    } 
+    }
 
 
     .football_sec,
