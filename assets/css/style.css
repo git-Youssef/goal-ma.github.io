@@ -72,14 +72,14 @@ input:focus {
   height: 40px;
   line-height: 40px;
   display: block;
-  border: 1px solid #06A49C;
+  border: 1px solid #06a49c;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   transition: all 0.3s;
-  background-color: #06A49C;
+  background-color: #06a49c;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -110,7 +110,7 @@ header .top {
 }
 @media screen and (min-width: 992px) {
   header .top {
-    border-bottom: 2px solid #06A49C;
+    border-bottom: 2px solid #06a49c;
   }
 }
 header .top .wrapper {
@@ -222,7 +222,7 @@ header .top .wrapper .right .social-media li a {
   color: #2a303b;
 }
 header .top .wrapper .right .sabonner {
-  background-color: #06A49C;
+  background-color: #06a49c;
   color: white;
 }
 header .navigation {
@@ -269,7 +269,7 @@ header .navigation .links_header {
 @media screen and (max-width: 991.2px) {
   header .navigation .nav-item {
     border-bottom: 1px solid rgba(216, 214, 214, 0.644);
-    background-color: #F5F6F8;
+    background-color: #f5f6f8;
   }
 }
 header .navigation .nav-item .nav-link {
@@ -293,7 +293,7 @@ main.categ_page .vd_heading::before {
   position: absolute;
   height: 9px;
   width: 50px;
-  background-color: #06A49C;
+  background-color: #06a49c;
   bottom: -15px;
   left: 0;
   right: 0;
@@ -310,6 +310,12 @@ main.categ_page .vd_heading:after {
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+main.contact_page button[type=submit] {
+  padding: 8px 20px;
+  background-color: #06a49c;
+  color: white;
+  border: 0;
 }
 main .random_sec .wrapper .slider_wrapper {
   margin-bottom: 0;
@@ -446,13 +452,13 @@ main .p_v_d .slider_wrapper .slick-dots li.slick-active button::before {
   color: black;
 }
 main .p_v_d .people h2 {
-  color: #F4255D;
+  color: #f4255d;
 }
 main .p_v_d .videos h2 {
-  color: #B00000;
+  color: #b00000;
 }
 main .p_v_d .divers h2 {
-  color: #4DB2E9;
+  color: #4db2e9;
 }
 main .section_title {
   display: flex;
@@ -501,8 +507,8 @@ main .right_side .newsletter_form h5 {
   font-size: 16px;
 }
 main .right_side .newsletter_form .btn-primary {
-  background-color: #06A49C;
-  border-color: #06A49C;
+  background-color: #06a49c;
+  border-color: #06a49c;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -628,7 +634,7 @@ footer .links_footer li a {
   -o-transition: all 0.3s;
 }
 footer .links_footer li a:hover {
-  color: #06A49C;
+  color: #06a49c;
 }
 
 /*# sourceMappingURL=style.css.map */
