@@ -305,7 +305,7 @@ header {
       }
     }
   }
-} 
+}
 
 // ****************** main page********************************
 
@@ -355,11 +355,26 @@ main {
 
   &.contact_page {
     button[type="submit"] {
-
       padding: 8px 20px;
       background-color: $main_color;
       color: white;
       border: 0;
+    }
+  }
+
+  &.article_page {
+    .art_relatifs {
+      h4.styled {
+        background-color: $main_color;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 16px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
     }
   }
 
@@ -619,42 +634,42 @@ main {
           rgb(241 241 241 / 0%)
         );
       }
+    }
 
-      .art_details {
-        span {
-          display: inline-block;
-          font-size: 11px;
-          color: #ccc;
-          margin: 0 2px;
+    .art_details {
+      span {
+        display: inline-block;
+        font-size: 11px;
+        color: #ccc;
+        margin: 0 2px;
 
-          @media screen and (max-width: 767px) {
-            margin: 0 4px;
-          }
+        @media screen and (max-width: 767px) {
+          margin: 0 4px;
         }
+      }
 
-        .art_title {
-          font-size: 16px;
-          color: black;
-          line-height: 22px;
-          margin: 7px 0;
-          font-weight: 600;
-          height: 44px;
-          overflow: hidden;
-        }
+      .art_title {
+        font-size: 16px;
+        color: black;
+        line-height: 22px;
+        margin: 7px 0;
+        font-weight: 600;
+        height: 44px;
+        overflow: hidden;
+      }
 
-        .art_desc {
-          color: black;
-          font-size: 14px;
-          margin: 0;
-          font-weight: 400;
-          overflow: hidden;
-          width: 100%;
-        }
+      .art_desc {
+        color: black;
+        font-size: 14px;
+        margin: 0;
+        font-weight: 400;
+        overflow: hidden;
+        width: 100%;
+      }
 
-        .art_categorie {
-          color: orangered;
-          font-weight: 700;
-        }
+      .art_categorie {
+        color: orangered;
+        font-weight: 700;
       }
     }
 
