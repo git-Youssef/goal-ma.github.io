@@ -317,6 +317,18 @@ main.contact_page button[type=submit] {
   color: white;
   border: 0;
 }
+main.contact_page h5 {
+  position: relative;
+  padding-bottom: 10px;
+}
+main.contact_page h5::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background-color: #06a49c;
+  width: 50px;
+}
 main.article_page h4.styled {
   background-color: #06a49c;
   color: white;
