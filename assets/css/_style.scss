@@ -360,6 +360,20 @@ main {
       color: white;
       border: 0;
     }
+
+    h5{
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h5::before{
+      content: "";
+      position: absolute;
+       bottom: 0;
+       height: 3px;
+       background-color: $main_color;
+       width: 50px;
+    }
   }
 
   &.article_page {
