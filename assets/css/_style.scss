@@ -377,12 +377,13 @@ main {
   }
 
   &.article_page {
-    h4.styled {
+    h2.styled {
       background-color: $main_color;
       color: white;
-      padding: 10px 20px;
+      padding: 6px 25px;
       border-radius: 30px;
       font-size: 16px;
+      line-height: initial;
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
       -ms-border-radius: 30px;
@@ -392,10 +393,16 @@ main {
     article{
       .art_details{
         .art_title{
-          margin-top: 0 ;
-          font-size:20px;
+          margin : 10px 0;
           line-height: 30px;
           height: auto;
+          text-align: justify; 
+
+        }
+
+        .art_desc{
+          margin: 20px 0;
+          text-align: justify;
         }
       }
     } 
@@ -577,10 +584,10 @@ main {
   .section_title {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     h2 {
-      line-height: 40px;
+      // line-height: 40px;
       font-weight: 600;
 
       @media screen and (max-width: 767px) {
@@ -589,7 +596,7 @@ main {
     }
 
     h5 {
-      line-height: 40px;
+      
       font-size: 18px;
     }
 
@@ -618,10 +625,7 @@ main {
   }
 
   .right_side {
-    .section_title {
-      margin-bottom: 20px;
-    }
-
+   
     .newsletter_form {
       h5 {
         font-size: 16px;
