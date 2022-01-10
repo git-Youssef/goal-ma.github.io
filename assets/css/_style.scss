@@ -232,10 +232,7 @@ header {
 
         .social-media li {
           display: inline-block;
-
-          &:last-child {
-            margin: 0 10px;
-          }
+          margin: 0 5px;
 
           a {
             color: #2a303b;
@@ -245,6 +242,7 @@ header {
         .sabonner {
           background-color: $main_color;
           color: white;
+          margin: 0 10px;
         }
       }
     }
@@ -307,7 +305,7 @@ header {
   }
 }
 
-// ****************** main page********************************
+// main
 
 main {
   &.categ_page {
@@ -318,37 +316,15 @@ main {
         }
       }
     }
-
-    .vd_heading {
-      font-weight: 600;
-      text-align: center;
-      position: relative;
-      padding-bottom: 10px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        height: 9px;
-        width: 50px;
-        background-color: #06a49c;
-        bottom: -15px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        z-index: 99;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -12px;
-        height: 2px;
-        width: 100%;
-        background-color: rgba(206, 206, 206, 0.35);
-
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+    .top_article {
+     
+      figure {
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
       }
     }
   }
@@ -361,18 +337,18 @@ main {
       border: 0;
     }
 
-    h5{
+    h5 {
       position: relative;
       padding-bottom: 10px;
     }
 
-    h5::before{
+    h5::before {
       content: "";
       position: absolute;
-       bottom: 0;
-       height: 3px;
-       background-color: $main_color;
-       width: 50px;
+      bottom: 0;
+      height: 3px;
+      background-color: $main_color;
+      width: 50px;
     }
   }
 
@@ -390,23 +366,21 @@ main {
       -o-border-radius: 30px;
     }
 
-    article{
-      .art_details{
-        .art_title{
-          margin : 10px 0;
+    article {
+      .art_details {
+        .art_title {
+          margin: 10px 0;
           line-height: 30px;
           height: auto;
-          text-align: justify; 
-
+          text-align: justify;
         }
 
-        .art_desc{
+        .art_desc {
           margin: 20px 0;
           text-align: justify;
         }
       }
-    } 
-    
+    }
   }
 
   .random_sec .wrapper {
@@ -432,83 +406,54 @@ main {
           }
         }
       }
-
-      &.main_article {
-        height: 100%;
-
-        a {
-          height: 100%;
-
-          figure {
-            height: 100%;
-
-            img {
-              width: 100%;
-              height: 100%;
-              z-index: -1;
-              object-fit: cover;
-              object-position: top;
-              position: initial;
-
-              @media screen and (min-width: 768px) {
-                position: absolute;
-              }
-            }
-          }
-        }
-      }
     }
   }
 
   .football_sec,
   .rugby_sec,
-  .basket,
-  .cyclisme,
-  .p_v_d {
+  .basket_sec {
     article {
-      height: 100%;
-
-      a {
+      figure {
+        position: relative;
         height: 100%;
-
-        figure {
-          position: relative;
+        img {
+          width: 100%;
           height: 100%;
+          object-fit: cover;
+          object-position: top;
+          position: initial;
 
-          img {
+          @media screen and (min-width: 768px) {
             position: absolute;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-
-            @media screen and (max-width: 767.999px) {
-              position: initial;
-            }
           }
         }
-
-        .art_desc {
-          white-space: nowrap;
-          text-overflow: ellipsis;
-        }
       }
-    }
-
-    .banniere_pub_inside {
-      max-width: 300px;
-      margin: 0 auto;
     }
   }
 
   .tennis_sec {
-    .art_desc {
-      line-height: 1.5em;
-      height: 3em;
-      overflow: hidden;
+    
+    .top_article {
+   
+      figure {
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+    article {
+      .art_desc {
+        line-height: 1.5em;
+        height: 3em;
+        overflow: hidden;
+      }
     }
   }
-
-  .cyclisme {
+  
+  .cyclisme_sec {
     article {
       .art_details {
         .art_categorie {
@@ -531,51 +476,83 @@ main {
     }
   }
 
-  .p_v_d {
-    .slider_wrapper {
-      .slick-arrow {
-        margin-top: 20px;
-        width: 40px;
+  .videos_sec {
 
-        &.next-arrow {
-          right: -40px;
+    .block_img{
+      position: relative;
+
+      .ico_play {
+        font-size: 60px;
+        color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transition: 0.3s all;
+        -webkit-transition: 0.3s all;
+        -moz-transition: 0.3s all;
+        -ms-transition: 0.3s all;
+        -o-transition: 0.3s all;
+        &.small {
+          font-size: 20px;
         }
-
-        &.prev-arrow {
-          left: -40px;
+        &:hover {
+          opacity: 1;
         }
       }
+    }
 
-      .slick-dots {
-        bottom: -40px;
-
-        li {
-          button:before {
-            color: #0000003b;
+    .right_block {
+      article {
+        .block_img{
+          height: 100%;
+        figure {
+          height: 100%;
+          img {
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
           }
+        }}
+      }
+    }
+  }
 
-          &.slick-active button::before {
-            color: rgb(0, 0, 0);
-          }
+  .people_divers_sec{
+    article.big{
+      figure{
+        position: relative;
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+          background-image: linear-gradient(
+            0deg,
+            rgb(0 0 0 / 48%),
+            rgba(241, 241, 241, 0)
+          );
         }
       }
-    }
+      .art_details{
+        position: absolute;
+        padding: 10px;
+        bottom: 0;
+        z-index: 1;
 
-    .people {
-      h2 {
-        color: #f4255d;
-      }
-    }
+        .art_title{
+          color: white;
+        }
+     
 
-    .videos {
-      h2 {
-        color: #b00000;
-      }
-    }
-
-    .divers {
-      h2 {
-        color: #4db2e9;
       }
     }
   }
@@ -596,7 +573,6 @@ main {
     }
 
     h5 {
-      
       font-size: 18px;
     }
 
@@ -625,7 +601,6 @@ main {
   }
 
   .right_side {
-   
     .newsletter_form {
       h5 {
         font-size: 16px;
@@ -649,19 +624,6 @@ main {
     a {
       display: block;
       position: relative;
-
-      .overlay {
-        top: 0;
-        left: 0;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-image: linear-gradient(
-          0deg,
-          rgb(0 0 0 / 98%),
-          rgb(241 241 241 / 0%)
-        );
-      }
     }
 
     .art_details {
@@ -684,6 +646,7 @@ main {
         font-weight: 600;
         height: 44px;
         overflow: hidden;
+        text-align: justify;
       }
 
       .art_desc {
@@ -702,13 +665,50 @@ main {
     }
 
     &.main_article {
-      .art_details {
-        position: absolute;
-        padding: 10px;
-        bottom: 0;
+      height: 100%;
 
-        .art_title {
-          color: white;
+      a {
+        height: 100%;
+
+        figure {
+          height: 100%;
+          position: relative;
+          &::before {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            background-image: linear-gradient(
+              0deg,
+              rgb(0 0 0 / 48%),
+              rgba(241, 241, 241, 0)
+            );
+          }
+
+          img {
+            position: initial;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+
+            @media screen and (min-width: 768px) {
+              position: absolute;
+            }
+          }
+        }
+
+        .art_details {
+          position: absolute;
+          padding: 10px;
+          bottom: 0;
+          z-index: 2;
+
+          .art_title {
+            color: white;
+          }
         }
       }
     }
@@ -720,7 +720,7 @@ main {
     padding: 20px 0;
   }
 
-  // ******************** default slider wraper ****************************
+  // ******************** default slider wrapper ****************************
   .slider_wrapper {
     .slick-arrow {
       height: 40px;
