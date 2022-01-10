@@ -214,9 +214,7 @@ header .top .wrapper .right {
 }
 header .top .wrapper .right .social-media li {
   display: inline-block;
-}
-header .top .wrapper .right .social-media li:last-child {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 header .top .wrapper .right .social-media li a {
   color: #2a303b;
@@ -224,6 +222,7 @@ header .top .wrapper .right .social-media li a {
 header .top .wrapper .right .sabonner {
   background-color: #06a49c;
   color: white;
+  margin: 0 10px;
 }
 header .navigation {
   padding: 0;
@@ -282,34 +281,13 @@ header .navigation .nav-item .nav-link {
 main.categ_page .random_sec .wrapper .main_article figure {
   height: 250px;
 }
-main.categ_page .vd_heading {
-  font-weight: 600;
-  text-align: center;
-  position: relative;
-  padding-bottom: 10px;
+main.categ_page .top_article figure {
+  height: 100%;
 }
-main.categ_page .vd_heading::before {
-  content: "";
-  position: absolute;
-  height: 9px;
-  width: 50px;
-  background-color: #06a49c;
-  bottom: -15px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 99;
-}
-main.categ_page .vd_heading:after {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  height: 2px;
-  width: 100%;
-  background-color: rgba(206, 206, 206, 0.35);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+main.categ_page .top_article figure img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 main.contact_page button[type=submit] {
   padding: 8px 20px;
@@ -367,91 +345,42 @@ main .random_sec .wrapper article:not(.main_article) a .art_details {
   background-color: white;
   padding: 10px;
 }
-main .random_sec .wrapper article.main_article {
+main .football_sec article figure,
+main .rugby_sec article figure,
+main .basket_sec article figure {
+  position: relative;
   height: 100%;
 }
-main .random_sec .wrapper article.main_article a {
-  height: 100%;
-}
-main .random_sec .wrapper article.main_article a figure {
-  height: 100%;
-}
-main .random_sec .wrapper article.main_article a figure img {
+main .football_sec article figure img,
+main .rugby_sec article figure img,
+main .basket_sec article figure img {
   width: 100%;
   height: 100%;
-  z-index: -1;
   object-fit: cover;
   object-position: top;
   position: initial;
 }
 @media screen and (min-width: 768px) {
-  main .random_sec .wrapper article.main_article a figure img {
+  main .football_sec article figure img,
+main .rugby_sec article figure img,
+main .basket_sec article figure img {
     position: absolute;
   }
 }
-main .football_sec article,
-main .rugby_sec article,
-main .basket article,
-main .cyclisme article,
-main .p_v_d article {
+main .tennis_sec .top_article figure {
   height: 100%;
 }
-main .football_sec article a,
-main .rugby_sec article a,
-main .basket article a,
-main .cyclisme article a,
-main .p_v_d article a {
-  height: 100%;
-}
-main .football_sec article a figure,
-main .rugby_sec article a figure,
-main .basket article a figure,
-main .cyclisme article a figure,
-main .p_v_d article a figure {
-  position: relative;
-  height: 100%;
-}
-main .football_sec article a figure img,
-main .rugby_sec article a figure img,
-main .basket article a figure img,
-main .cyclisme article a figure img,
-main .p_v_d article a figure img {
-  position: absolute;
+main .tennis_sec .top_article figure img {
   height: 100%;
   object-fit: cover;
   object-position: top;
 }
-@media screen and (max-width: 767.999px) {
-  main .football_sec article a figure img,
-main .rugby_sec article a figure img,
-main .basket article a figure img,
-main .cyclisme article a figure img,
-main .p_v_d article a figure img {
-    position: initial;
-  }
-}
-main .football_sec article a .art_desc,
-main .rugby_sec article a .art_desc,
-main .basket article a .art_desc,
-main .cyclisme article a .art_desc,
-main .p_v_d article a .art_desc {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-main .football_sec .banniere_pub_inside,
-main .rugby_sec .banniere_pub_inside,
-main .basket .banniere_pub_inside,
-main .cyclisme .banniere_pub_inside,
-main .p_v_d .banniere_pub_inside {
-  max-width: 300px;
-  margin: 0 auto;
-}
-main .tennis_sec .art_desc {
+main .tennis_sec article .art_desc {
   line-height: 1.5em;
   height: 3em;
   overflow: hidden;
 }
-main .cyclisme article .art_details .art_categorie {
+main .cyclisme_sec article .art_details .art_categorie {
   background-color: yellow;
   color: black;
   padding: 3px 5px;
@@ -463,36 +392,68 @@ main .cyclisme article .art_details .art_categorie {
   -o-border-radius: 2px;
   margin: 0 0 8px;
 }
-main .cyclisme article .art_details .art_title {
+main .cyclisme_sec article .art_details .art_title {
   font-size: 13px;
 }
-main .p_v_d .slider_wrapper .slick-arrow {
-  margin-top: 20px;
-  width: 40px;
+main .videos_sec .block_img {
+  position: relative;
 }
-main .p_v_d .slider_wrapper .slick-arrow.next-arrow {
-  right: -40px;
+main .videos_sec .block_img .ico_play {
+  font-size: 60px;
+  color: white;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
 }
-main .p_v_d .slider_wrapper .slick-arrow.prev-arrow {
-  left: -40px;
+main .videos_sec .block_img .ico_play.small {
+  font-size: 20px;
 }
-main .p_v_d .slider_wrapper .slick-dots {
-  bottom: -40px;
+main .videos_sec .block_img .ico_play:hover {
+  opacity: 1;
 }
-main .p_v_d .slider_wrapper .slick-dots li button:before {
-  color: #0000003b;
+main .videos_sec .right_block article .block_img {
+  height: 100%;
 }
-main .p_v_d .slider_wrapper .slick-dots li.slick-active button::before {
-  color: black;
+main .videos_sec .right_block article .block_img figure {
+  height: 100%;
 }
-main .p_v_d .people h2 {
-  color: #f4255d;
+main .videos_sec .right_block article .block_img figure img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
-main .p_v_d .videos h2 {
-  color: #b00000;
+main .people_divers_sec article.big figure {
+  position: relative;
 }
-main .p_v_d .divers h2 {
-  color: #4db2e9;
+main .people_divers_sec article.big figure::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.48), rgba(241, 241, 241, 0));
+}
+main .people_divers_sec article.big .art_details {
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  z-index: 1;
+}
+main .people_divers_sec article.big .art_details .art_title {
+  color: white;
 }
 main .section_title {
   display: flex;
@@ -548,14 +509,6 @@ main article a {
   display: block;
   position: relative;
 }
-main article a .overlay {
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.98), rgba(241, 241, 241, 0));
-}
 main article .art_details span {
   display: inline-block;
   font-size: 11px;
@@ -575,6 +528,7 @@ main article .art_details .art_title {
   font-weight: 600;
   height: 44px;
   overflow: hidden;
+  text-align: justify;
 }
 main article .art_details .art_desc {
   color: black;
@@ -588,12 +542,44 @@ main article .art_details .art_categorie {
   color: orangered;
   font-weight: 700;
 }
-main article.main_article .art_details {
+main article.main_article {
+  height: 100%;
+}
+main article.main_article a {
+  height: 100%;
+}
+main article.main_article a figure {
+  height: 100%;
+  position: relative;
+}
+main article.main_article a figure::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.48), rgba(241, 241, 241, 0));
+}
+main article.main_article a figure img {
+  position: initial;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+@media screen and (min-width: 768px) {
+  main article.main_article a figure img {
+    position: absolute;
+  }
+}
+main article.main_article a .art_details {
   position: absolute;
   padding: 10px;
   bottom: 0;
+  z-index: 2;
 }
-main article.main_article .art_details .art_title {
+main article.main_article a .art_details .art_title {
   color: white;
 }
 main .banniere_pub_outside {
