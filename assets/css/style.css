@@ -278,9 +278,6 @@ header .navigation .nav-item .nav-link {
   text-align: center;
 }
 
-main.categ_page .random_sec .wrapper .main_article figure {
-  height: 250px;
-}
 main.categ_page .top_article figure {
   height: 100%;
 }
@@ -307,27 +304,29 @@ main.contact_page h5::before {
   background-color: #06a49c;
   width: 50px;
 }
-main.article_page h2.styled {
+main.article_page .section_title .styled {
   background-color: #06a49c;
   color: white;
   padding: 6px 25px;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: initial;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
-main.article_page article .art_details .art_title {
+main.article_page .section_title .styled.small {
+  font-size: 14px;
+}
+main.article_page .full_article article .art_details .art_title {
   margin: 10px 0;
   line-height: 30px;
   height: auto;
-  text-align: justify;
+  font-size: 20px;
 }
-main.article_page article .art_details .art_desc {
-  margin: 20px 0;
-  text-align: justify;
+main.article_page .full_article article .art_details .art_desc {
+  height: auto;
 }
 main .random_sec .wrapper .slider_wrapper {
   margin-bottom: 0;
@@ -367,6 +366,9 @@ main .basket_sec article figure img {
     position: absolute;
   }
 }
+main .basket_sec article .art_details .art_title {
+  height: auto;
+}
 main .tennis_sec .top_article figure {
   height: 100%;
 }
@@ -374,11 +376,6 @@ main .tennis_sec .top_article figure img {
   height: 100%;
   object-fit: cover;
   object-position: top;
-}
-main .tennis_sec article .art_desc {
-  line-height: 1.5em;
-  height: 3em;
-  overflow: hidden;
 }
 main .cyclisme_sec article .art_details .art_categorie {
   background-color: yellow;
@@ -391,9 +388,6 @@ main .cyclisme_sec article .art_details .art_categorie {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   margin: 0 0 8px;
-}
-main .cyclisme_sec article .art_details .art_title {
-  font-size: 13px;
 }
 main .videos_sec .block_img {
   position: relative;
@@ -432,6 +426,10 @@ main .videos_sec .right_block article .block_img figure img {
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+main .people_divers_sec h2 {
+  font-size: 25px;
+  font-weight: 500 !important;
 }
 main .people_divers_sec article.big figure {
   position: relative;
@@ -530,6 +528,9 @@ main article .art_details .art_title {
   overflow: hidden;
   text-align: justify;
 }
+main article .art_details .art_title.small {
+  font-size: 14px;
+}
 main article .art_details .art_desc {
   color: black;
   font-size: 14px;
@@ -537,6 +538,9 @@ main article .art_details .art_desc {
   font-weight: 400;
   overflow: hidden;
   width: 100%;
+  line-height: 22px;
+  height: 44px;
+  text-align: justify;
 }
 main article .art_details .art_categorie {
   color: orangered;
