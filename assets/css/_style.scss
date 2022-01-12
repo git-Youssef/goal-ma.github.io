@@ -309,15 +309,7 @@ header {
 
 main {
   &.categ_page {
-    .random_sec .wrapper {
-      .main_article {
-        figure {
-          height: 250px;
-        }
-      }
-    }
     .top_article {
-     
       figure {
         height: 100%;
         img {
@@ -353,31 +345,36 @@ main {
   }
 
   &.article_page {
-    h2.styled {
-      background-color: $main_color;
-      color: white;
-      padding: 6px 25px;
-      border-radius: 30px;
-      font-size: 16px;
-      line-height: initial;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -ms-border-radius: 30px;
-      -o-border-radius: 30px;
+    .section_title {
+      .styled {
+        background-color: $main_color;
+        color: white;
+        padding: 6px 25px;
+        border-radius: 30px;
+        font-size: 20px;
+        line-height: initial;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        &.small {
+          font-size: 14px;
+        }
+      }
     }
 
-    article {
-      .art_details {
-        .art_title {
-          margin: 10px 0;
-          line-height: 30px;
-          height: auto;
-          text-align: justify;
-        }
-
-        .art_desc {
-          margin: 20px 0;
-          text-align: justify;
+    .full_article {
+      article {
+        .art_details {
+          .art_title {
+            margin: 10px 0;
+            line-height: 30px;
+            height: auto;
+            font-size: 20px;
+          }
+          .art_desc {
+            height: auto;
+          }
         }
       }
     }
@@ -431,10 +428,17 @@ main {
     }
   }
 
+  .basket_sec {
+    article {
+      .art_details {
+        .art_title {
+          height: auto;
+        }
+      }
+    }
+  }
   .tennis_sec {
-    
     .top_article {
-   
       figure {
         height: 100%;
         img {
@@ -444,15 +448,8 @@ main {
         }
       }
     }
-    article {
-      .art_desc {
-        line-height: 1.5em;
-        height: 3em;
-        overflow: hidden;
-      }
-    }
   }
-  
+
   .cyclisme_sec {
     article {
       .art_details {
@@ -468,17 +465,12 @@ main {
           -o-border-radius: 2px;
           margin: 0 0 8px;
         }
-
-        .art_title {
-          font-size: 13px;
-        }
       }
     }
   }
 
   .videos_sec {
-
-    .block_img{
+    .block_img {
       position: relative;
 
       .ico_play {
@@ -509,23 +501,28 @@ main {
 
     .right_block {
       article {
-        .block_img{
+        .block_img {
           height: 100%;
-        figure {
-          height: 100%;
-          img {
+          figure {
             height: 100%;
-            object-fit: cover;
-            object-position: top;
+            img {
+              height: 100%;
+              object-fit: cover;
+              object-position: top;
+            }
           }
-        }}
+        }
       }
     }
   }
 
-  .people_divers_sec{
-    article.big{
-      figure{
+  .people_divers_sec {
+    h2 {
+      font-size: 25px;
+      font-weight: 500 !important;
+    }
+    article.big {
+      figure {
         position: relative;
         &::before {
           content: "";
@@ -542,17 +539,15 @@ main {
           );
         }
       }
-      .art_details{
+      .art_details {
         position: absolute;
         padding: 10px;
         bottom: 0;
         z-index: 1;
 
-        .art_title{
+        .art_title {
           color: white;
         }
-     
-
       }
     }
   }
@@ -647,6 +642,9 @@ main {
         height: 44px;
         overflow: hidden;
         text-align: justify;
+        &.small {
+          font-size: 14px;
+        }
       }
 
       .art_desc {
@@ -656,6 +654,9 @@ main {
         font-weight: 400;
         overflow: hidden;
         width: 100%;
+        line-height: 22px;
+        height: 44px;
+        text-align: justify;
       }
 
       .art_categorie {
