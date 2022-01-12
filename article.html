@@ -94,9 +94,21 @@
     </header>
 
     <main class="article_page">
+      <!-- banniere publicitere -->
+      <section class="banniere_pub_outside bg-light">
+        <div class="container">
+          <a href="#">
+            <figure>
+              <img src="assets/images/banner.jpg" alt="banner" />
+            </figure>
+          </a>
+        </div>
+      </section>
+      <!-- banniere publicitere -->
+
       <section class="section_padding">
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-between full_article mb-5">
             <div class="col-md-12">
               <div class="section_title">
                 <!-- <div class="separator"></div> -->
@@ -104,22 +116,28 @@
                 <div class="separator"></div>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-between mb-5">
             <div class="col-md-7">
               <div class="row">
                 <div class="col-md-12">
                   <article>
-                    <figure>
-                      <img src="assets/images/download (1).webp" alt="" />
-                    </figure>
-
                     <div class="art_details">
                       <h3 class="art_title">
                         NMD : La région de l’Oriental a besoin de sa diaspora
                         pour poursuivre son élan de développement (Webinaire)
                       </h3>
-                      <p class="art_desc">
+                      <p class="text-end">
+                        <span class="art_date"> 21 déc. 2021 </span>
+                        <span class="art_src">
+                          <a href="#">le10sport.com</a>
+                        </span>
+                        <div class="sharethis-inline-share-buttons"></div>
+                      </p>
+
+                      <figure>
+                        <img src="assets/images/download (1).webp" alt="" />
+                      </figure>
+
+                      <p class="art_desc my-3">
                         Un Conseil de gouvernement se tiendra, jeudi, sous la
                         présidence du Chef du gouvernement, Aziz Akhannouch,
                         avec à l’ordre du jour l’examen de six projets de
@@ -135,13 +153,6 @@
                         indépendants et des personnes non salariées exerçant une
                         activité libérale, indique un communiqué du Département
                         du Chef de gouvernement.
-                      </p>
-
-                      <p class="text-end">
-                        <span class="art_date"> 21 déc. 2021 </span>
-                        <span class="art_src">
-                          <a href="#">le10sport.com</a>
-                        </span>
                       </p>
                     </div>
                   </article>
@@ -164,7 +175,7 @@
                 <div class="col-sm-12">
                   <div class="section_title">
                     <div class="separator"></div>
-                    <h2 class="styled">Newsletters</h2>
+                    <h5 class="styled">Newsletters</h5>
                     <div class="separator"></div>
                   </div>
                 </div>
@@ -197,17 +208,13 @@
             </div>
           </div>
 
-
-          <div class="row">
+          <div class="row artcile_relatifs mb-5">
             <div class="col-sm-12">
               <div class="section_title">
-                <h2 class="styled">Article relatifs</h2>
+                <h5 class="styled small">Article relatifs</h5>
                 <div class="separator"></div>
               </div>
             </div>
-          </div>
-          <div class="row artcile_relatifs mb-5">
-          
             <div class="col-md-4">
               <article>
                 <a href="#">
@@ -326,6 +333,7 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61dee080300a07001a921e46&product=inline-share-buttons" async="async"></script>
     <script src="assets/js/main.js"></script>
 
     <!-- end scripts  -->
