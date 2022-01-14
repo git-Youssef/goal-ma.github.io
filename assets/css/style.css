@@ -502,6 +502,10 @@ main .right_side .newsletter_form .btn-primary {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
+  display: block;
+  margin: 16px auto;
+  max-width: 150px;
+  width: 100%;
 }
 main article a {
   display: block;
@@ -528,6 +532,11 @@ main article .art_details .art_title {
   overflow: hidden;
   text-align: justify;
 }
+@media screen and (max-width: 575px) {
+  main article .art_details .art_title {
+    font-size: 14px;
+  }
+}
 main article .art_details .art_title.small {
   font-size: 14px;
 }
@@ -541,6 +550,11 @@ main article .art_details .art_desc {
   line-height: 22px;
   height: 44px;
   text-align: justify;
+}
+@media screen and (max-width: 575px) {
+  main article .art_details .art_desc {
+    font-size: 12px;
+  }
 }
 main article .art_details .art_categorie {
   color: orangered;
